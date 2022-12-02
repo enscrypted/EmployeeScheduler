@@ -1,0 +1,79 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* Left column */
+.leftcolumn {
+  width: 25%;
+  float: left;
+  overflow: auto;
+}
+
+/* Right column */
+.rightcolumn {
+  width: 75%;
+  overflow: auto;
+}
+
+/* Schedule style */
+.card.second {
+  display: inline-block;
+  text-align: center;
+  width: 65vw;
+  margin-top: 14vh;
+  height: 65vh;
+  background-color: white;
+  overflow-y: scroll;
+  border: 3px solid black;
+}
+
+.scheduleTable {
+  border: none;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.scheduleTable td {
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+#employee {
+  display: fixed;
+  height: 70px;
+}
+
+#days, #dates {
+  display: fixed;
+  height: 40px;
+}
+
+#blankDate {
+  border-top: transparent;
+}
+
+#blankDay {
+  border-bottom: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

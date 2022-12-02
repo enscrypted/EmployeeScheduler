@@ -1,0 +1,79 @@
+.dialog {
+    display: none;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vw;
+    background: #000;
+    opacity: .5;
+}
+
+.dialog-content {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    z-index: 999;
+    padding: 20px;
+    width: 460px;
+    margin-left: -120;
+    background: #fff;
+    border-radius: 24px;
+    transform: translate(-50%);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.dialog-header {
+    position: relative;
+}
+
+.dialog-header > div {
+    position: absolute; 
+    right: 0;
+    top: 0;
+}
+
+form > div {
+    margin: 20px 0;
+}
+
+.dialog-footer {
+    text-align: right;
+}
+
+.dialog-footer button {
+    padding: 6px 10px;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+from {top:-300px; opacity:0} 
+to {top:35%; opacity:1}
+}
+
+@keyframes animatetop {
+from {top:-300px; opacity:0}
+to {top:35%; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: rgba(0, 0, 0, 0.274);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}

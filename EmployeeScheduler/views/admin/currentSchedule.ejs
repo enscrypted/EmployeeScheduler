@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Current Schedule</title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel='stylesheet' href='/stylesheets/schedule.css' />
+	</head>
+	<body>
+		<div class="leftcolumn col-3 d-inline-block"><%- include('./menu'); -%> </div>
+		<div class="rightcolumn col-9 d-inline-block float-end">
+			<div class="card second third text-center align-self-center">
+				<table class="scheduleTable"> <!-- Loop through employees, creating rows for them -->
+					<tr id="days">
+						<td id="blankDay"></td>
+						<th>Sunday</th>
+						<th>Monday</th>
+						<th>Tuesday</th>
+						<th>Wednesday</th>
+						<th>Thursday</th>
+						<th>Friday</th>
+						<th>Saturday</th>
+					</tr>
+					<!--<tr id="dates">  //Insert dates in which the schedule is being built 
+						<td id="blankDate"></td>
+						<td id="sundayDate">00/00</td>
+						<td id="mondayDate">00/00</td>
+						<td id="tuesdayDate">00/00</td>
+						<td id="wednesdayDate">00/00</td>
+						<td id="thursdayDate">00/00</td>
+						<td id="fridayDate">00/00</td>
+						<td id="saturdayDate">00/00</td>
+					</tr>-->
+					<% data.forEach(function(item) { %>
+					<tr>
+						<td id="employee">
+							<%= item.employee.name%> 
+							<br>
+						  <span class="font-size13">
+								<%= item.employee.epos %><br>
+							</span>
+						</td>
+						<% for(let i = 0; i < 7; ++i) { %>
+							<td>
+							<% for (let j = 0; j < item.shifts.length; ++j) { %>
+								<% if (item.shifts[j].day === i) { %>
+									<span class="padding-5px-tb border-radius-5 margin-10px-bottom font-size16 xs-font-size13">
+										<%- item.shifts[j].schedule %>
+									</span>
+								<% } %>
+							<% } %>
+							</td>
+						<% } %>
+					</tr>
+					<% }) %>
+				</table>
+			</div>
+		  <div>
+				<button class="form__button btn btn-primary" onclick="location.href='/admin/generateSchedule'">Create a Schedule</button>
+		  </div>
+		</div>
+	</body>
+</html>
