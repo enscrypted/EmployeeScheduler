@@ -2,7 +2,7 @@
 
 # Automated Employee Scheduler
 
-### Version 1.0
+### Version 0.1.0
 
 #### Prepared by Nathan Brannan, Ashton Carruthers, Ken Mills, Zifeng Yuan, Andrew Santa
 ##### Acknowledgement to [@kilgallin](https://www.github.com/kilgallin) for providing the necessary environment  for development
